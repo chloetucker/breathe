@@ -13,28 +13,30 @@
 .buttons {
     border-radius: 15px;
     font-family: 'Special Elite', cursive;
-    font-size: .618rem;
+    font-size: 1rem;
     border: none;
     background-color: rgb(144, 213, 247);
-    margin: 1rem 0 .618rem 0;
-    
+    margin: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+
 }
 
 .buttons:hover {
-    background-color: #C3ECFC;
+    background-color: #ffdcdc;
     color: rgb(0, 25, 35);
     cursor: pointer;
 }
 
 .site-title {
-    transition: all 3s ease 0s;
-    font-size: 1.2rem;
+    transition: all 3s ease .1s;
+    font-size: 1rem;
 }
 
 .site-title:hover {
-    color: white;
-    transform: scale(1.618);
-    text-shadow: 0 0 8px #e4a0f5;
+    color: #ffdcdc;
+    transform: scale(1.1);
+    text-shadow: 0 0 1px #ffdcdc;
 }
 
 /* animation stylings */
@@ -43,18 +45,22 @@
     0% {
         -webkit-box-shadow: 0 0 13px #ffdcdc;
     }
+
     25% {
         -webkit-box-shadow: 0 0 34px #e4a0f5;
     }
+
     50% {
         -webkit-box-shadow: 0 0 89px #ff77a7;
-    }    
+    }
+
     95% {
         -webkit-box-shadow: 0 0 21px #ffdcdc;
     }
+
     100% {
         -webkit-box-shadow: 0 0 13px #fff;
-    }    
+    }
 }
 }
 
@@ -62,18 +68,22 @@
     0% {
         box-shadow: 0 0 13px #ffdcdc;
     }
+
     25% {
         box-shadow: 0 0 34px #e4a0f5;
     }
+
     50% {
         box-shadow: 0 0 89px #ff77a7;
-    }   
+    }
+
     95% {
         box-shadow: 0 0 21px #ffdcdc;
     }
+
     100% {
         box-shadow: 0 0 13px #fff;
-    }    
+    }
 }
 
 @-webkit-keyframes pulse {
@@ -293,5 +303,25 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.gradient {
+    background: linear-gradient(-45deg, rgb(144, 213, 247), rgb(144, 213, 247), #ffdcdc, #ffdcdc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
